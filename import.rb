@@ -26,8 +26,8 @@ emotions_page = agent.submit(signin_form, signin_form.buttons.first)
 Dir::glob("#{BASE_DIR}/tmp/*.png").each { |file|
   basename      = File.basename(file, ".png")
 
-  basename.gsub!(/(-|_)/, "")
   shortcut_text = RENAME_MAP[basename] || basename
+  shortcut_text.gsub!(/(-|_)/, "")
 
   upload_form = emotions_page.form_with(action: SETTINGS['hipchat']['emotions_url'])
   upload_form.shortcut = shortcut_text
