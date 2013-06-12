@@ -3,6 +3,8 @@ hipchat-emoji-import
 
 Batch uploading of hipchat emotions.
 
+> You may only have 50 custom emoticons at one time. Please delete an existing emoticon before uploading a new one.
+
 # usage
 
 ```
