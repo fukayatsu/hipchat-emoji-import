@@ -1,0 +1,4 @@
+hipchat:
+  emotions_url: https://example.hipchat.com/admin/emoticons
+  email: foo@example.com
+  password: foobarbaz
