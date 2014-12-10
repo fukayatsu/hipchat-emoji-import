@@ -23,8 +23,8 @@ signin_form.password = SETTINGS['hipchat']['password']
 emotions_page = agent.submit(signin_form, signin_form.buttons.first)
 
 
-Dir::glob("#{BASE_DIR}/tmp/*.png").each { |file|
-  basename      = File.basename(file, ".png")
+Dir::glob("#{BASE_DIR}/tmp/*.{png,gif}").each { |file|
+  basename      = File.basename(file, '.*')
 
   shortcut_text = RENAME_MAP[basename] || basename
   shortcut_text.gsub!(/(-|_)/, "")
